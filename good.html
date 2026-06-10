@@ -3,33 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yay! 🎉</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Thank You!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             height: 100vh;
-            display: flex; justify-content: center; align-items: center;
-            background-color: #f4f7f6; /* Clean background matching the bill */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at top left, #2ecc71, #27ae60, #1d3557);
+            color: white;
             font-family: 'Poppins', sans-serif;
             overflow: hidden;
         }
-        .modal-card {
-            background: white; padding: 50px; border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center;
-            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+
+        .thank-you-card {
+            width: 90%;
+            max-width: 450px;
+            padding: 40px 30px;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
         }
-        @keyframes popIn {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+
+        .thanks-text {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-        h1 { color: #2ecc71; font-size: 3.5rem; margin: 0; }
+
+        .thanks-sticker {
+            display: block;
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin: 20px auto 0 auto;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+            animation: celebrate 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes celebrate {
+            0% {
+                transform: scale(1) rotate(-3deg);
+            }
+            100% {
+                transform: scale(1.08) rotate(3deg);
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="modal-card">
-        <h1> killaadi achumwon! </h1>
+    <div class="thank-you-card">
+        <h1 class="thanks-text">Nanniyunde!</h1>
+        <img src="sticker4.png" alt="Celebration Sticker" class="thanks-sticker">
     </div>
 
 </body>
