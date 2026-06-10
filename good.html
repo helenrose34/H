@@ -6,24 +6,45 @@
     <title>Yay! 🎉</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
 
         body {
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f4f7f6;
+            /* Restored your original original premium background gradient */
+            background: radial-gradient(circle at top left, #ffb703, #fb8500, #1d3557);
             font-family: 'Poppins', sans-serif;
             overflow: hidden;
         }
 
+        /* Container to hold both the card and the sticker safely together */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 340px;
+            padding: 20px;
+        }
+
         .modal-card {
             background: white;
-            padding: 50px;
+            padding: 40px 20px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             text-align: center;
+            width: 100%;
+            /* Fixed square shape rules to match your previous screen */
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
 
@@ -40,27 +61,32 @@
 
         h1 {
             color: #2ecc71;
-            font-size: 3.5rem;
+            font-size: 2.2rem;
+            font-weight: 900;
             margin: 0;
+            line-height: 1.2;
         }
 
+        /* Fixed Sticker layout: It now sits naturally BELOW the box */
         .sticker {
-            position: absolute;
-            top: calc(50% + 140px);
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
+            display: block;
+            width: 140px;
+            height: auto;
+            margin-top: 30px; /* Clean spacing below the white box */
+            object-fit: contain;
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
         }
     </style>
 </head>
 <body>
 
-    <div class="modal-card">
-        <h1>Killaadi Achumwonn !</h1>
-    </div>
+    <div class="wrapper">
+        <div class="modal-card">
+            <h1>Killadi achumwon</h1>
+        </div>
 
-    <!-- Replace sticker.png with your sticker image -->
-    <img src="sticker4.png" alt="Sticker" class="sticker">
+        <img src="sticker4.png" alt="Sticker" class="sticker">
+    </div>
 
 </body>
 </html>
