@@ -14,9 +14,30 @@
             font-family: 'Poppins', sans-serif;
             overflow: hidden;
         }
+        
+        /* Container for both the card and the sticker */
+        .wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* The sticker positioned perfectly above the card */
+        .sticker {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+            position: absolute;
+            top: -110px; /* Adjust this value to move the sticker up or down */
+            z-index: 2;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
         .modal-card {
             background: white; padding: 50px; border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center;
+            position: relative;
+            z-index: 1;
             animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
         @keyframes popIn {
@@ -28,8 +49,12 @@
 </head>
 <body>
 
-    <div class="modal-card">
-        <h1>Nanniyunde! 😌</h1>
+    <div class="wrapper">
+        <img src="sticker4.png" alt="Sticker" class="sticker">
+        
+        <div class="modal-card">
+            <h1>Killaadi Achumwon </h1>
+        </div>
     </div>
 
 </body>
