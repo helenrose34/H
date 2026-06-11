@@ -10,12 +10,11 @@
         body {
             height: 100vh;
             display: flex; justify-content: center; align-items: center;
-            background-color: #f4f7f6; /* Clean background matching the bill */
+            background-color: #f4f7f6; 
             font-family: 'Poppins', sans-serif;
             overflow: hidden;
         }
         
-        /* Container for both the card and the sticker */
         .wrapper {
             position: relative;
             display: flex;
@@ -23,12 +22,11 @@
             align-items: center;
         }
 
-        /* The sticker positioned perfectly above the card */
         .sticker {
-            width: 150px; /* Adjust size as needed */
+            width: 150px; 
             height: auto;
             position: absolute;
-            top: -110px; /* Adjust this value to move the sticker up or down */
+            top: -110px; 
             z-index: 2;
             animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
